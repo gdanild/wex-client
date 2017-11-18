@@ -30,7 +30,7 @@ pr2 =False
  
 def Special_ticker():
      mes = ""
-     if True:
+     try:
           q = client.active_orders()["return"]
           for i in q.keys():
                pair = q[i]["pair"]
@@ -38,6 +38,8 @@ def Special_ticker():
                mes1 = pair.replace("_", " ").upper()
                mes2 = "sell: " + str(round(infa["sell"], 4)) + " buy: " + str(round(infa["buy"], 4))
                mes = mes + mes1 + "\n" + mes2 + "\n" + palka + "\n"
+     except:
+          mes = "No active order"
 
      return mes
 

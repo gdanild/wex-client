@@ -1,4 +1,6 @@
-key = "" #wex key
-secret = "" #wex secret
-token = "" #telegram token bot
+key = ""
+secret = ""
+token = ""
 palka = "================"
+key1 = ""
+secret1 = ""
